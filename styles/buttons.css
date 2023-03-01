@@ -1,0 +1,153 @@
+:root {
+    --btn-bg-color: #14213d;
+    --btn-txt-color: white;
+
+    --round-btn-size: 7rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+button.remove {
+    animation: buttonRemoval 300ms ease-out;
+}
+
+button.add {
+    animation: buttonRemoval 300ms ease-in reverse;
+}
+
+.button {
+    background: var(--btn-bg-color);
+    color: var(--btn-txt-color);
+    fill: var(--btn-txt-color);
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-right: 0.6rem solid #303030;
+    border-bottom: 0.6rem solid #505050;
+    cursor: pointer;
+    box-shadow: 0.2em 0.2em .15em .2em rgba(0, 0, 0, 0.5);
+}
+
+.button:active {
+    border: 1px;
+    box-shadow: 0 0 0 0;
+}
+
+#play-button {
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--round-btn-size);
+    height: var(--round-btn-size);
+    border-radius: var(--round-btn-size);
+}
+
+.button svg {
+    width: calc(2rem);
+    height: calc(2rem);
+}
+
+#arrow-down {
+    transform: rotate(180deg);
+}
+
+#arrow-left {
+    transform: rotate(-90deg);
+}
+
+#arrow-right {
+    transform: rotate(90deg);
+}
+
+.movement-buttons {
+    position: relative;
+    display: none;
+    grid-template-columns: repeat(3, 5vh);
+    grid-template-rows: repeat(3, 5vh);
+    grid-gap: 0.4em;
+}
+
+.button.up {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.button.left {
+    grid-row: 2;
+}
+
+.button.center {
+    grid-row: 2;
+}
+
+.button.right {
+    grid-row: 2;
+}
+
+.button.down {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.button.hide-down {
+    transform: translateY(100vh);
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 1em;
+    background: var(--main-bg-colour);
+    fill: #14213d;
+    color: #14213d;
+    border: .1em solid #14213d;
+    box-shadow: .05em .05em .2em black;
+    cursor: pointer;
+    position: absolute;
+    top: .75em;
+    right: 6.5em;
+}
+
+.info.left {
+    left: 6.5em;
+}
+
+.zenska {
+    transition: 1s;
+    color: deeppink;
+    border-color: deeppink;
+}
+
+.moski {
+    transition: 1s;
+    color: #14213d;
+    border-color: #14213d;
+}
+
+.info:hover {
+    box-shadow: 0 0 0;
+    animation: slow-up-down linear infinite 1s;
+}
+
+.info-svg {
+    width: 1em;
+    height: 1em;
+}
+
+.autoplayButton {
+    margin: 5em;
+    width: 10em;
+    height: 10em;
+    color: white;
+    background: blueviolet;
+    border-radius: 2em;
+}
